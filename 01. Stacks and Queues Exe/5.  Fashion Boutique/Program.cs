@@ -1,4 +1,4 @@
-namespace _5.__Fashion_Boutique
+namespace FashionBoutique
 {
      using System;
      using System.Linq;
