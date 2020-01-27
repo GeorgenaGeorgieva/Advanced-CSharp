@@ -1,16 +1,19 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_8.__Balanced_Parentheses
+namespace BalancedParentheses
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            char[] input = Console.ReadLine().Trim().ToCharArray();
-            Queue<char> firstPart = new Queue<char>();   //"{[(" - FIFO
-            Stack<char> secondPart = new Stack<char>();  //")]}" - LIFO
+            char[] input = Console.ReadLine()
+                .Trim()
+                .ToCharArray();
+            
+            Queue<char> firstPart = new Queue<char>();      //"{[(" - FIFO
+            Stack<char> secondPart = new Stack<char>();     //")]}" - LIFO
 
             if (input.Length % 2 != 0)
             {
@@ -41,7 +44,9 @@ namespace Problem_8.__Balanced_Parentheses
                     bool isBalancedFifthCase = firstPart.Peek() == ']' && secondPart.Peek() == '[';
                     bool isBalancedsSixthCase = firstPart.Peek() == ')' && secondPart.Peek() == '(';
 
-                    if (isBalancedFirstCase || isBalancedSecondCase || isBalancedThirdCase || isBalancedForthCase || isBalancedFifthCase || isBalancedsSixthCase)
+                    if (isBalancedFirstCase|| isBalancedSecondCase 
+                        || isBalancedThirdCase || isBalancedForthCase 
+                        || isBalancedFifthCase || isBalancedsSixthCase)
                     {
                         firstPart.Dequeue();
                         secondPart.Pop();
