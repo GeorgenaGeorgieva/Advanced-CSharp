@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _3._Maximum_and_Minimum_Element
+namespace MaximumAndMinimumElement
 {
+      using System;
+      using System.Collections.Generic;
+      using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
@@ -13,12 +13,17 @@ namespace _3._Maximum_and_Minimum_Element
 
             for (int i = 0; i < numberOfQueries; i++)
             {
-                var input = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
-                var currentQuerie = input[0];
+                int[] input = Console.ReadLine()
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                    .Select(int.Parse)
+                    .ToArray();
+                
+                int currentQuerie = input[0];
 
                 if (currentQuerie == 1)
                 {
                     int numberToPush = input[1];
+                    
                     if (numberToPush >= 1 && numberToPush <= 109)
                     {
                         stack.Push(numberToPush);
@@ -36,10 +41,9 @@ namespace _3._Maximum_and_Minimum_Element
                 {
                     Console.WriteLine(stack.Min());
                 }
-
             }
+            
             Console.WriteLine(string.Join(", ", stack));
         }
-
     }
 }
