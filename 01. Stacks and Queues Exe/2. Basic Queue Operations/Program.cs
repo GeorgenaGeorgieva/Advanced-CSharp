@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _2._Basic_Queue_Operations
+namespace BasicQueueOperations
 {
+      using System;
+      using System.Collections.Generic;
+      using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+            int[] input = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            
             int numberToAdd = input[0];
             int numberToRemove = input[1];
             int element = input[2];
 
-            var numbers = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
-            var queue = new Queue<int>();
+            int[] numbers = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+                
+            Queue<int> queue = new Queue<int>();
 
             for (int i = 0; i < numberToAdd; i++)
             {
