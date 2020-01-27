@@ -1,15 +1,20 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
 namespace _5.__Fashion_Boutique
 {
+     using System;
+     using System.Linq;
+     using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var clothesInBox = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+            int[] clothesInBox = Console.ReadLine()
+                .Split(new[] { ' ' }.StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            
             Stack<int> clothes = new Stack<int>(clothesInBox);
+            
             int capacityOfRack = int.Parse(Console.ReadLine());
 
             bool isBoxCapacity = clothesInBox.Length <= 50;
@@ -24,6 +29,7 @@ namespace _5.__Fashion_Boutique
                 while (clothes.Any())
                 {
                     int currentClothes = clothes.Peek();
+                    
                     if ((sumValuesOfClothes + currentClothes) > capacityOfRack)
                     {
                         rack++;
@@ -35,6 +41,7 @@ namespace _5.__Fashion_Boutique
                         clothes.Pop();
                     }
                 }
+                
                Console.WriteLine(rack);
             }
         }
