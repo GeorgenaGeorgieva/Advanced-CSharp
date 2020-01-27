@@ -1,20 +1,27 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-namespace Problem_7.__Truck_Tour
+namespace TruckTour
 {
+     using System;
+     using System.Linq;
+     using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
             Queue<int> difference = new Queue<int>();
+            
             int petrolPumps = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < petrolPumps; i++)
             {
-                int[] pumpInfo = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+                int[] pumpInfo = Console.ReadLine()
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                    .Select(int.Parse)
+                    .ToArray();
+                
                 int givesPetrol = pumpInfo[0];
                 int necessaryPetrol = pumpInfo[1];
+                
                 difference.Enqueue(givesPetrol - necessaryPetrol);
             }
 
@@ -23,6 +30,7 @@ namespace Problem_7.__Truck_Tour
             while (true)
             {
                 Queue<int> copyDifference = new Queue<int>(difference);
+                
                 int fuel = -1;
                
                 while (copyDifference.Any())
@@ -41,6 +49,7 @@ namespace Problem_7.__Truck_Tour
                     else
                     {
                         fuel += copyDifference.Dequeue();
+                        
                         if (fuel < 0)
                         {
                             break;
@@ -53,6 +62,7 @@ namespace Problem_7.__Truck_Tour
                     Console.WriteLine(index);
                     return;
                 }
+                
                 index++;
             }
         }
