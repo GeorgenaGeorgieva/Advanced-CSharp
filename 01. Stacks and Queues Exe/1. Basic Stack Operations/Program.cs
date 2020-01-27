@@ -1,29 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _1._Basic_Stack_Operations
+namespace BasicStackOperations
 {
+     using System;
+     using System.Collections.Generic;
+     using System.Linq;
+
     class Program
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(" ");
-            int elementsToPush = int.Parse(input[0]);
-            int elementsToPop = int.Parse(input[1]);
-            int elementsToLook = int.Parse(input[2]);
+            int[] input = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            
+            int elementsToPush = input[0];
+            int elementsToPop = input[1];
+            int elementsToLook = input[2];
 
-            var numbers = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+            int[] numbers = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            
             Stack<int> stack = new Stack<int>();
 
             for (int i = 0; i < elementsToPush; i++)
             {
                 stack.Push(numbers[i]);
             }
+            
             for (int i = 0; i < elementsToPop; i++)
             {
                 stack.Pop();
             }
+            
             if (stack.Contains(elementsToLook))
             {
                 Console.WriteLine($"true");
