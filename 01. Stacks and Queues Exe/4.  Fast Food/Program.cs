@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Problem_4.__Fast_Food
+namespace FastFood
 {
+      using System;
+      using System.Collections.Generic;
+      using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
         {
             int quantityOfFood = int.Parse(Console.ReadLine());
-            var orders = Console.ReadLine().Split(" ").Select(int.Parse);
+            
+            int[] orders = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            
             Queue<int> queue = new Queue<int>(orders);
 
             if (queue.Any())
