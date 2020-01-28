@@ -1,21 +1,25 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Problem_9.__Simple_Text_Editor
+namespace SimpleTextEditor
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    using System.Text;
+    
     class Program
     {
         static void Main(string[] args)
-        {
-            int numberOfOperations = int.Parse(Console.ReadLine());
+        {   
             Stack<string> versions = new Stack<string>();
             StringBuilder text = new StringBuilder();
-
+            
+            int numberOfOperations = int.Parse(Console.ReadLine());
+            
             for (int i = 0; i < numberOfOperations; i++)
             {
-                string[] comandsInfo = Console.ReadLine().Split().ToArray();
+                string[] comandsInfo = Console.ReadLine()
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
+                
                 string comand = comandsInfo[0];
 
                 switch (comand)
