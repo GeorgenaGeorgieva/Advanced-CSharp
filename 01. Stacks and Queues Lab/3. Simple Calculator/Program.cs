@@ -1,16 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace _3._Simple_Calculator
+
+namespace SimpleCalculator
 {
+     using System;
+     using System.Collections.Generic;
+     using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(" ").ToArray();
+            string[] input = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .ToArray();
+            
             Stack<string> symbols = new Stack<string>(input.Reverse());
-            var result = int.Parse(symbols.Pop());
+            int result = int.Parse(symbols.Pop());
 
             while (symbols.Any())
             {
@@ -25,6 +30,7 @@ namespace _3._Simple_Calculator
                     result -= int.Parse(symbols.Pop());
                 }
             }
+            
             Console.WriteLine(result);
         }
     }
