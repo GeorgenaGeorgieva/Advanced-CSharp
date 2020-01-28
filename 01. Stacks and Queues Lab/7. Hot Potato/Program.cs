@@ -1,17 +1,20 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _7._Hot_Potato
+namespace HotPotato
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(" ");
-            Queue<string> queue = new Queue<string>(input);
-            int number = int.Parse(Console.ReadLine());
-            int counter = 1;
+            var input = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            
+            var queue = new Queue<string>(input);
+            
+            var number = int.Parse(Console.ReadLine());
+            var counter = 1;
 
             while (queue.Count > 1)
             {
@@ -25,8 +28,10 @@ namespace _7._Hot_Potato
                 {
                     Console.WriteLine($"Removed {currentChild}");
                 }
+                
                 counter++;
             }
+            
             Console.WriteLine($"Last is {queue.Dequeue()}");
         }
     }
