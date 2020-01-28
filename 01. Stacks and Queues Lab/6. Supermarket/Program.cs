@@ -1,16 +1,18 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _6._Supermarket
+namespace Supermarket
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
             Queue<string> queue = new Queue<string>();
+            
             string input = Console.ReadLine();
             int countOfPeople = 0;
+            
             while (input != "End")
             {
                 if (input != "Paid")
@@ -25,10 +27,13 @@ namespace _6._Supermarket
                     {
                         Console.WriteLine(queue.Dequeue());
                     }
+                    
                    countOfPeople = 0;
                 }
+                
                 input = Console.ReadLine();
             }
+            
             Console.WriteLine($"{countOfPeople} people remaining.");
         }
     }
