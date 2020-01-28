@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _5._Print_Even_Numbers_Queue
+namespace PrintEvenNumbersQueue
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            int[] numbers = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
             Queue<int> queue = new Queue<int>();
-
+            
+            int[] numbers = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            
             for (int i = 0; i < numbers.Length; i++)
             {
                 int currentNumber = numbers[i];
@@ -20,6 +24,7 @@ namespace _5._Print_Even_Numbers_Queue
                     queue.Enqueue(currentNumber);
                 }
             }
+            
             Console.WriteLine(string.Join(", ", queue));
         }
     }
