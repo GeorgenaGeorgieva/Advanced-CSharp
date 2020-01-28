@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Globalization;
-
-
-namespace _4._Matching_Brackets
+namespace MatchingBrackets
 {
+     using System;
+     using System.Collections.Generic;
+     using System.Linq;
+     using System.Text;
+     using System.Globalization;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
             Stack<int> stack = new Stack<int>();
+            string input = Console.ReadLine();
             
             for (int i = 0; i < input.Length; i++)
             {
