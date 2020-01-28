@@ -1,4 +1,4 @@
-namespace Reverse_Strings
+namespace ReverseStrings
 {
      using System;
      using System.Collections.Generic;
