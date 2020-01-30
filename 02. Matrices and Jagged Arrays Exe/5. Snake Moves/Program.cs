@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _5._Snake_Moves
+namespace SnakeMoves
 {
-    class Program
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
+    class StartUp
     {
         static void Main(string[] args)
         {
             int[] matrixSize = Console.ReadLine()
-                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
 
@@ -18,7 +18,7 @@ namespace _5._Snake_Moves
 
             char[,] matrix = new char[rows, cols];
 
-            var inputSnake = Console.ReadLine().ToCharArray();
+            char[] inputSnake = Console.ReadLine().ToCharArray();
 
             Queue<char> snakeQueue = new Queue<char>(inputSnake);
 
@@ -39,15 +39,17 @@ namespace _5._Snake_Moves
                     }
                 } 
             }
+            
             PrintMatrix(matrix);
         }   
+        
         static void SnakeMoves(char[,] matrix, Queue<char> snakeQueue, int row, int col)
         {
-            
             matrix[row, col] = snakeQueue.Peek();
             snakeQueue.Enqueue(snakeQueue.Peek());
             snakeQueue.Dequeue();
         }
+        
         static void PrintMatrix(char[,] matrix)
         {
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -56,6 +58,7 @@ namespace _5._Snake_Moves
                 {
                     Console.Write(matrix[row, col]);
                 }
+                
                 Console.WriteLine();
             }
         }
