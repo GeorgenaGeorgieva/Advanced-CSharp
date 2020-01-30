@@ -1,17 +1,18 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _1._Sum_Matrix_Elements
+namespace SumMatrixElements
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
             int[] matrixInfo = Console.ReadLine()
-                .Split(", ")
+                .Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
+            
             int rows = matrixInfo[0];
             int cols = matrixInfo[1];
             int[,] matrix = new int[rows, cols];
@@ -19,7 +20,7 @@ namespace _1._Sum_Matrix_Elements
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 int[] colElements = Console.ReadLine()
-                    .Split(", ")
+                    .Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
                     .Select(int.Parse)
                     .ToArray();
 
@@ -38,6 +39,7 @@ namespace _1._Sum_Matrix_Elements
                     sumElements += matrix[row, col];
                 }
             }
+            
             Console.WriteLine(rows);
             Console.WriteLine(cols);
             Console.WriteLine(sumElements);
