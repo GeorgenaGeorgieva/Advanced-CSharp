@@ -1,16 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _7.__Knight_Game
+namespace KnightGame
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            int size = int.Parse(Console.ReadLine()); 
-
-            char[,] boardMatrix = new char[size, size]; 
+            int sizeMatrix = int.Parse(Console.ReadLine()); 
+            char[,] boardMatrix = new char[sizeMatrix, sizeMatrix]; 
 
             for (int row = 0; row < boardMatrix.GetLength(0); row++)
             {
@@ -100,6 +99,7 @@ namespace _7.__Knight_Game
                 }
             }
         }
+        
         public static bool IsInside(char[,] boardMatrix, int row, int col)
         {
             return row >= 0 && row < boardMatrix.GetLength(0) && col >= 0 && col < boardMatrix.GetLength(1);
