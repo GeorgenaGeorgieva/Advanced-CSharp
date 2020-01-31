@@ -1,20 +1,20 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_3._Periodic_Table
+namespace PeriodicTable
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            int countOfLines = int.Parse(Console.ReadLine());
             var uniqueChemicalElements = new HashSet<string>();
+            var countOfLines = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < countOfLines; i++)
             {
                 var chemicalCompounds = Console.ReadLine()
-                    .Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                 for (int k = 0; k < chemicalCompounds.Length; k++)
                 {
