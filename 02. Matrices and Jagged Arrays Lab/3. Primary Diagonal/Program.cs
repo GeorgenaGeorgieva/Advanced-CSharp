@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _3._Primary_Diagonal
+namespace PrimaryDiagonal
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
@@ -14,7 +14,7 @@ namespace _3._Primary_Diagonal
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 int[] colElements = Console.ReadLine()
-                    .Split(" ")
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                     .Select(int.Parse)
                     .ToArray();
 
@@ -23,6 +23,7 @@ namespace _3._Primary_Diagonal
                     matrix[row, col] = colElements[col];
                 }
             }
+            
             int sumDiagonalElements = 0;
             int currentRow = 0;
             int currentCol = 0;
@@ -33,10 +34,12 @@ namespace _3._Primary_Diagonal
                 {
                     break;
                 }
+                
                 sumDiagonalElements += matrix[currentRow, currentCol];
                 currentRow++;
                 currentCol++;
             }
+            
             Console.WriteLine(sumDiagonalElements);
         }
     }
