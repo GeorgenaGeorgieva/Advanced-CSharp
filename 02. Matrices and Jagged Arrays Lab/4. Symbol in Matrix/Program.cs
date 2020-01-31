@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _4._Symbol_in_Matrix
+namespace SymbolInMatrix
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
@@ -13,13 +13,14 @@ namespace _4._Symbol_in_Matrix
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                var colElements = Console.ReadLine();
+                string colElements = Console.ReadLine();
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
                     matrix[row, col] = colElements[col];
                 }
             }
+            
             char symbol = char.Parse(Console.ReadLine());
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -33,6 +34,7 @@ namespace _4._Symbol_in_Matrix
                     }
                 }  
             }
+            
             Console.WriteLine($"{symbol} does not occur in the matrix");
         }
     }
