@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Problem_1._Unique_Usernames
+namespace UniqueUsernames
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            int countOfNames = int.Parse(Console.ReadLine());
             var uniqueUsers = new HashSet<string>();
+            
+            int countOfNames = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < countOfNames; i++)
             {
