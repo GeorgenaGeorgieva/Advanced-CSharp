@@ -1,14 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-namespace Problem_5._Count_Symbols
+namespace CountSymbols
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
             var characters = new Dictionary<char, int>();
-            string inputLine = Console.ReadLine();
+            var inputLine = Console.ReadLine();
 
             for (int i = 0; i < inputLine.Length; i++)
             {
@@ -18,10 +19,13 @@ namespace Problem_5._Count_Symbols
                 {
                     characters.Add(symbol, 0);
                 }
+                
                 characters[symbol]++;
             }
 
-            characters = characters.OrderBy(x => x.Key).ToDictionary(s => s.Key, y => y.Value);
+            characters = characters
+                .OrderBy(x => x.Key)
+                .ToDictionary(s => s.Key, y => y.Value);
 
             foreach (var kvp in characters)
             {
