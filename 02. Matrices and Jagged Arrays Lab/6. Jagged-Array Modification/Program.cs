@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
- 
-namespace _6._Jagged_Array_Modification
+namespace JaggedArrayModification
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+ 
     class Program
     {
         static void Main(string[] args)
@@ -13,8 +13,8 @@ namespace _6._Jagged_Array_Modification
 
             for (int row = 0; row < rows; row++)
             {
-                var currentRow = Console.ReadLine()
-                    .Split(" ")
+                int[] currentRow = Console.ReadLine()
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                     .Select(int.Parse)
                     .ToArray();
 
@@ -28,24 +28,30 @@ namespace _6._Jagged_Array_Modification
 
             while (true)
             {
-                var command = Console.ReadLine();
+                string command = Console.ReadLine();
 
                 if (command.ToLower() == "end")
                 {
                     break;
                 }
-                var commandParts = command.Split(" ");
-                var commandOperator = commandParts[0];
-                var commandRow = int.Parse(commandParts[1]);
-                var commandCol = int.Parse(commandParts[2]);
-                var commandValue = int.Parse(commandParts[3]);
+             
+                string[] commandParts = command
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+             
+                string commandOperator = commandParts[0];
+                int commandRow = int.Parse(commandParts[1]);
+                int commandCol = int.Parse(commandParts[2]);
+                int commandValue = int.Parse(commandParts[3]);
 
-                if (commandRow < 0 || commandRow >= jaggedArr.Length 
-                    || commandCol < 0 || commandCol >= jaggedArr[commandRow].Length)
+                if (commandRow < 0 
+                    || commandRow >= jaggedArr.Length 
+                    || commandCol < 0 
+                    || commandCol >= jaggedArr[commandRow].Length)
                 {
                     Console.WriteLine($"Invalid coordinates");
                     continue;
                 }
+             
                 if (commandOperator.ToLower() == "add") 
                 {
                     jaggedArr[commandRow][commandCol] += commandValue;
