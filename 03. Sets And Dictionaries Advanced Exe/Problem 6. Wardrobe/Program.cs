@@ -1,21 +1,25 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_6._Wardrobe
+namespace Wardrobe
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            int numberOfLines = int.Parse(Console.ReadLine());
             var wardrobe = new Dictionary<string, Dictionary<string, int>>();
+            
+            var numberOfLines = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < numberOfLines; i++)
             {
-                var inputLine = Console.ReadLine().Split(" -> ", StringSplitOptions.RemoveEmptyEntries);
+                var inputLine = Console.ReadLine()
+                    .Split(" -> ", StringSplitOptions.RemoveEmptyEntries);
+                
                 var color = inputLine[0];
-                var clothes = inputLine[1].Split(",", StringSplitOptions.RemoveEmptyEntries);
+                var clothes = inputLine[1]
+                    .Split(",", StringSplitOptions.RemoveEmptyEntries);
 
                 if (!wardrobe.ContainsKey(color))
                 {
@@ -30,13 +34,16 @@ namespace Problem_6._Wardrobe
                     {
                         wardrobe[color].Add(currentClothes, 0);
                     }
+                    
                     wardrobe[color][currentClothes]++;
                 }
             }
 
-            string[] selectedClothing = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-            string selectedColor = selectedClothing[0];
-            string selectedType = selectedClothing[1];
+            var selectedClothing = Console.ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            
+            var selectedColor = selectedClothing[0];
+            var selectedType = selectedClothing[1];
 
             foreach (var kvp in wardrobe)
             { 
