@@ -1,22 +1,25 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _4._Cities_by_Continent_and_Country
+namespace CitiesByContinentAndCountry
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            int countOfLines = int.Parse(Console.ReadLine());
             var continentsContent = new Dictionary<string, Dictionary<string, List<string>>>();
+            
+            var countOfLines = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < countOfLines; i++)
             {
-                var inputLine = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                string continent = inputLine[0];
-                string country = inputLine[1];
-                string city = inputLine[2];
+                var inputLine = Console.ReadLine()
+                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                
+                var continent = inputLine[0];
+                var country = inputLine[1];
+                var city = inputLine[2];
 
                 if (!continentsContent.ContainsKey(continent))
                 {
@@ -29,6 +32,7 @@ namespace _4._Cities_by_Continent_and_Country
                     {
                         continentsContent[continent].Add(country, new List<string>());
                     }
+                    
                     continentsContent[continent][country].Add(city);
                 }
             }
