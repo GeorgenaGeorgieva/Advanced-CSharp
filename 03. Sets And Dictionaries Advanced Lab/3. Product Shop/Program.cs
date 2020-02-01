@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _3._Product_Shop
+namespace ProductShop
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
@@ -12,21 +12,23 @@ namespace _3._Product_Shop
 
             while (true)
             {
-                var input = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries);
+                var input = Console.ReadLine()
+                    .Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                 if (input[0] == "Revision")
                 {
                     break;
                 }
 
-                string shop = input[0];
-                string product = input[1];
-                double price = double.Parse(input[2]);
+                var shop = input[0];
+                var product = input[1];
+                var price = double.Parse(input[2]);
 
                 if (!shopsAndProducts.ContainsKey(shop))
                 {
                     shopsAndProducts[shop] = new Dictionary<string, double>();
                 }
+                
                 shopsAndProducts[shop][product] = price;
             }
             
