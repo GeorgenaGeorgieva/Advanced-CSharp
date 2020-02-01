@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _6._Parking_Lot
+namespace ParkingLot
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
@@ -12,15 +12,16 @@ namespace _6._Parking_Lot
 
             while (true)
             {
-                var inputLine = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries);
+                string[] inputLine = Console.ReadLine()
+                    .Split(", ", StringSplitOptions.RemoveEmptyEntries);
 
                 if (inputLine[0] == "END")
                 {
                     break;
                 }
 
-                var direction = inputLine[0];
-                var carNumber = inputLine[1];
+                string direction = inputLine[0];
+                string carNumber = inputLine[1];
 
                 if (direction == "IN")
                 {
