@@ -1,15 +1,16 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _5._Record_Unique_Names
+namespace RecordUniqueNames
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            int countOfNames = int.Parse(Console.ReadLine());
             HashSet<string> uniqueNmaes = new HashSet<string>();
+            
+            int countOfNames = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < countOfNames; i++)
             {
