@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text.RegularExpressions;
-
-namespace _7._SoftUni_Party
+namespace SoftUniParty
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Text.RegularExpressions;
+    
     class Program
     {
         static void Main(string[] args)
@@ -41,6 +41,7 @@ namespace _7._SoftUni_Party
                             break;
                         }
                     }
+                    
                     break;
                 }
                 else
@@ -55,12 +56,13 @@ namespace _7._SoftUni_Party
                     }
                 }
             }
+            
             PrintingGuestLists(vip, regularGuests);
         }
 
         static bool IsMatched(string inputline)
         {
-            var pattern = @"(?<VIP>^\d)";
+            string pattern = @"(?<VIP>^\d)";
             Regex regex = new Regex(pattern);
             MatchCollection matchedInput = regex.Matches(inputline);
 
@@ -68,6 +70,7 @@ namespace _7._SoftUni_Party
             {
                 return false;
             }
+            
             return true;
         }
 
