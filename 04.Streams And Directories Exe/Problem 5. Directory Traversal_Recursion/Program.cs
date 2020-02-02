@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_5._Directory_Traversal_Recursion
+namespace DirectoryTraversalRecursion
 {
+    using System;
+    using System.IO;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
@@ -56,7 +56,6 @@ namespace Problem_5._Directory_Traversal_Recursion
         private static List<FileInfo> GetAllFilesFromDirectory(string path)
         {
             var rootDirectory = new DirectoryInfo(path);
-
             var allFiles = new List<FileInfo>();
 
             var files = rootDirectory.GetFiles();
