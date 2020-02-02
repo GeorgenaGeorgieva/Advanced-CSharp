@@ -1,11 +1,11 @@
-﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_1._Even_Lines
+namespace EvenLines
 {
+    using System;
+    using System.IO;
+    using System.Text.RegularExpressions;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
