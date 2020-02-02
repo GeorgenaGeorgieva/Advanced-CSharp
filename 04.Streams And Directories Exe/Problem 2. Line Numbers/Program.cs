@@ -1,12 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.IO;
-using System.Globalization;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Problem_2._Line_Numbers
+namespace LineNumbers
 {
+    using System;
+    using System.Linq;
+    using System.IO;
+    using System.Globalization;
+    using System.Collections.Generic;
+    using System.Text;
+    
     class Program
     {
         static void Main(string[] args)
