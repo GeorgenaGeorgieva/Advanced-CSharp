@@ -1,16 +1,17 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Problem_5._Directory_Traversal
+namespace DirectoryTraversal
 {
+    using System;
+    using System.IO;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     class Program
     {
         static void Main(string[] args)
         {
             var filesExtension = new Dictionary<string, Dictionary<string, long>>();
-            var directory = new DirectoryInfo(Environment.CurrentDirectory);
+            
+            var directory = new DirectoryInfo(Environment.CurrentDirectory);    
             var files = directory.GetFiles();
 
             foreach (var file in files)
