@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-
-namespace Problem_4._Copy_Binary_File
+namespace CopyBinaryFile
 {
+    using System;
+    using System.IO;
+
     class Program
     {
         static void Main(string[] args)
