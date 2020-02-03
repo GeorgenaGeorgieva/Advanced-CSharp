@@ -1,13 +1,13 @@
-﻿using System;
-using System.IO;
-
-namespace File_Operations_5._Slice_a_File
+namespace SliceАFile
 {
+    using System;
+    using System.IO;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            double numberOfPiece = 4;
+            var numberOfPiece = 4;
             var totalSize = new FileInfo($"sliceMe.txt").Length;
             var sizePerFile = (int)Math.Ceiling(totalSize / numberOfPiece);
 
