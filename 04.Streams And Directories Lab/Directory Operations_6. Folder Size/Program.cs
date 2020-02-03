@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-
-namespace Directory_Operations_6._Folder_Size
+namespace FolderSize
 {
+    using System;
+    using System.IO;
+    
     class Program
     {
         static void Main(string[] args)
