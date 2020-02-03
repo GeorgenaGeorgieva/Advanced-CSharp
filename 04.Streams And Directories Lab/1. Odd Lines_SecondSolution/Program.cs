@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-
-namespace File_Operations_1._Odd_Lines_SecondSolution
+namespace OddLinesSecondSolution
 {
+    using System;
+    using System.IO;
+    
     class Program
     {
         static void Main(string[] args)
@@ -22,9 +22,11 @@ namespace File_Operations_1._Odd_Lines_SecondSolution
                     {
                         consoleOutput.WriteLine(line);
                     }
+                    
                     counter++;
                 }
             }
+            
             consoleOutput.Close();
         }
     }
