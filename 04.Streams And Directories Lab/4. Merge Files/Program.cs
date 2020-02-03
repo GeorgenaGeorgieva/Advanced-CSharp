@@ -1,13 +1,12 @@
-﻿using System;
-using System.IO;
-
-namespace File_Operations_4._Merge_Files
+namespace MergeFiles
 {
+    using System;
+    using System.IO;
+
     class Program
     {
         static void Main(string[] args)
         {
-            
             using (var readerOne = new StreamReader(@"FileOne.txt"))
             {
                 using (var readerTwo = new StreamReader(@"FileTwo.txt"))
@@ -30,6 +29,7 @@ namespace File_Operations_4._Merge_Files
                                 currentLine = readerTwo.ReadLine();
                                 writerOutput.WriteLine(currentLine);
                             }
+                            
                             counter++;
                         }
                     }
