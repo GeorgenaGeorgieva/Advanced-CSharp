@@ -1,11 +1,11 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace File_Operations_3._Word_Count
+namespace WordCount
 {
+    using System;
+    using System.IO;
+    using System.Text;
+    using System.Linq;
+    using System.Collections.Generic;
+
     class Program
     {
         static void Main(string[] args)
