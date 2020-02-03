@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-
-namespace File_Operations_1._Odd_Lines
+namespace FileOperationsOddLines
 {
+    using System;
+    using System.IO;
+    
     class Program
     {
         static void Main(string[] args)
@@ -16,10 +16,12 @@ namespace File_Operations_1._Odd_Lines
                     while (!reader.EndOfStream)
                     {
                         var line = reader.ReadLine();
+                        
                         if (counter % 2 == 1)
                         {
                             writer.WriteLine(line);
                         }
+                        
                         counter++;
                     }
                 }
