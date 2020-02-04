@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-
-namespace Directory_Operations_6._Folder_Size_SecondSolution
+namespace FolderSizeSecondSolution
 {
+    using System;
+    using System.IO;
+    
     class Program
     {
         static void Main(string[] args)
@@ -15,7 +15,6 @@ namespace Directory_Operations_6._Folder_Size_SecondSolution
         {
             var totalLength = 0L;
             var files = Directory.GetFiles(directory);
-
             var subDirectories = Directory.GetDirectories(directory);
 
             foreach (var subDirectory in subDirectories)
@@ -28,6 +27,7 @@ namespace Directory_Operations_6._Folder_Size_SecondSolution
                 var fileInfo = new FileInfo(file);
                 totalLength += fileInfo.Length;
             }
+            
             return totalLength;
         }
     }
