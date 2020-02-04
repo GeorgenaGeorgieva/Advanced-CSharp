@@ -1,15 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_2._Knights_of_Honor
+namespace KnightsOfHonor
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var names = Console.ReadLine();
-            var title = "Sir";
+            string names = Console.ReadLine();
+            string title = "Sir";
 
             Action<string> knighthoodCeremony = x => Console.WriteLine($"{title} {x}");
 
