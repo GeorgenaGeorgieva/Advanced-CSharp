@@ -1,14 +1,14 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_5._Applied_Arithmetics
+namespace AppliedArithmetics
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var numbers = Console.ReadLine()
+            int[] numbers = Console.ReadLine()
                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                .Select(int.Parse)
                .ToArray();
@@ -20,7 +20,7 @@ namespace Problem_5._Applied_Arithmetics
 
             while (true)
             {
-                var command = Console.ReadLine();
+                string command = Console.ReadLine();
 
                 if (command == "end")
                 {
