@@ -8,7 +8,7 @@ namespace CustomMinFunction
     {
         static void Main(string[] args)
         {
-            int[] number = Console.ReadLine()
+            List<int> numbers = Console.ReadLine()
                  .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                  .Select(int.Parse)
                  .ToList()
