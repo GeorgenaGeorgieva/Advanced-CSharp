@@ -28,7 +28,7 @@ namespace FindEvensOrOdds
 
             List<int> numbers = new List<int>();
 
-            for (int i = range[0]; i <= range[1]; i++)
+            for (int i = rangeNumbers[0]; i <= rangeNumbers[1]; i++)
             {
                 numbers.Add(i);
             }
