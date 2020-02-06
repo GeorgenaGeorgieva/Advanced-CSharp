@@ -8,7 +8,7 @@ namespace FindEvensOrOdds
     {
         static void Main(string[] args)
         {
-            int[] range = Console.ReadLine()
+            int[] rangeNumbers = Console.ReadLine()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
