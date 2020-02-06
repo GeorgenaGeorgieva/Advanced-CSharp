@@ -1,19 +1,19 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace Problem_4._Find_Evens_or_Odds
+namespace FindEvensOrOdds
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var range = Console.ReadLine()
+            int[] range = Console.ReadLine()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
 
-            var condition = Console.ReadLine();
+            string condition = Console.ReadLine();
 
             Func<int, bool> numberInRange;
 
@@ -26,7 +26,7 @@ namespace Problem_4._Find_Evens_or_Odds
                 numberInRange = x => x % 2 == 0;
             }
 
-            var numbers = new List<int>();
+            List<int> numbers = new List<int>();
 
             for (int i = range[0]; i <= range[1]; i++)
             {
