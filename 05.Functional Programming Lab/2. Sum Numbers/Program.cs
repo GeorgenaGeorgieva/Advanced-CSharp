@@ -1,14 +1,14 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _2._Sum_Numbers
+namespace SumNumbers
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine();
+            string input = Console.ReadLine();
 
             Func<string, int> parser = n => int.Parse(n);
 
