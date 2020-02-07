@@ -1,24 +1,25 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-namespace Problem_9._List_of_Predicates
+namespace ListOfPredicates
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     class Program
     {
         static void Main(string[] args)
         {
-            var rangeBorder = int.Parse(Console.ReadLine());
-            var dividers = Console.ReadLine()
+            int rangeBorder = int.Parse(Console.ReadLine());
+            List<int> dividers = Console.ReadLine()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .Distinct()
                 .ToList();
 
-            var numbersToDivide = new List<int>();
+            List<int> numbersToDivide = new List<int>();
 
             for (int num = 1; num <= rangeBorder; num++)
             {
-                var isDivisible = true;
+                bool isDivisible = true;
 
                 foreach (var divider in dividers)
                 {
