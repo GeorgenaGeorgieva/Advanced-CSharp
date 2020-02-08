@@ -1,8 +1,8 @@
-﻿using System;
-using DefiningClasses;
-
 namespace DefiningClasses
 {
+    using System;
+    using DefiningClasses;
+    
     public class StartUp
     {
         public static void Main(string[] args)
