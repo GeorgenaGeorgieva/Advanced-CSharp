@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _3._Count_Uppercase_Words
+namespace CountUppercaseWords
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+
     class Program
     {
         static void Main(string[] args)
