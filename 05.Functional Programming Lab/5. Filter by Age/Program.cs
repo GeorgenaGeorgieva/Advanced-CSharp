@@ -1,14 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _5._Filter_by_Age
+namespace FilterByAge
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+    
     public class Person
     {
         public string Name { get; set; }
         public int Age { get; set; }
-
     }
 
     class Program
