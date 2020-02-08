@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace DefiningClasses_Person
+namespace DefiningClassesPerson
 {
+    using System;
+    
     public class Person
     {
         private string name;
