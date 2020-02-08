@@ -1,8 +1,7 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-
 namespace DefiningClasses
 {
+    using System.Linq;
+    using System.Collections.Generic;
 
     public class Family
     {
