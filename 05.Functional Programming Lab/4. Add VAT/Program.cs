@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace _4._Add_VAT
+namespace AddVAT
 {
+    using System;
+    using System.Linq;
+    using System.Collections.Generic;
+
     class Program
     {
         static void Main(string[] args)
