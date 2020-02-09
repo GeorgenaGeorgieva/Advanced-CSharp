@@ -1,4 +1,3 @@
-﻿
 namespace DefiningClasses
 {
     public class Person
