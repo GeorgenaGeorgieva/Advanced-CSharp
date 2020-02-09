@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-
 namespace DefiningClasses
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Linq;
 
-public class DateModifier
-{
-    public int ReturnDateDifference(string firstDate, string secondDate)
-    {
+  public class DateModifier
+  {
+     public int ReturnDateDifference(string firstDate, string secondDate)
+     {
         var firstDateArray = firstDate
             .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(int.Parse)
@@ -35,6 +34,6 @@ public class DateModifier
         var result = Math.Abs((firstDateTime - secondDateTime).Days);
 
         return result;
-    }
-}
+      }
+   }
 }
