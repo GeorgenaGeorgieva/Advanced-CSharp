@@ -1,7 +1,7 @@
-﻿using System;
-
 namespace DefiningClasses
 {
+    using System;
+    
     public class StartUp
     {
         public static void Main(string[] args)
@@ -23,7 +23,6 @@ namespace DefiningClasses
             }
 
             Person oldestMember = family.GetOldestMember();
-
             Console.WriteLine($"{oldestMember.Name} {oldestMember.Age}");
         }
     }
