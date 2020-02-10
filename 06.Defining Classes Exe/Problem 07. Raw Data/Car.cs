@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-
 namespace DefiningClasses
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Linq;
+    
     public class Car
     {
         private string model;
