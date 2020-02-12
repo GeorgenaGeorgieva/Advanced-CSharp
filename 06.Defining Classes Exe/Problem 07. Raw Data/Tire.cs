@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace DefiningClasses
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    
     public class Tire
     {
         private double pressure;
@@ -26,6 +26,5 @@ namespace DefiningClasses
             get { return this.age; }
             private set { this.age = value; }
         }
-
     }
 }
