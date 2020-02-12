@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text;
-
-namespace Problem_2._Car_Extension
+namespace CarExtension
 {
+    using System;
+    using System.Text;
+    
     public class Car
     {
         public string Make { get; set; }
