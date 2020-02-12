@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace DefiningClasses
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    
     public class Engine
     {
         private int speed;
