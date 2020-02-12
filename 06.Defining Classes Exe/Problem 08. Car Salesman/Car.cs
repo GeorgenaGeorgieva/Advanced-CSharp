@@ -1,4 +1,3 @@
-﻿
 namespace DefiningClasses
 {
     using System;
