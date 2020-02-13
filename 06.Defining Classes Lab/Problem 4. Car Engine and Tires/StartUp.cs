@@ -1,8 +1,8 @@
-﻿using System;
-using CarManufacturer;
-
 namespace CarManufacturer
 {
+    using System;
+    using CarManufacturer;
+
     public class StartUp
     {
         public static void Main(string[] args)
