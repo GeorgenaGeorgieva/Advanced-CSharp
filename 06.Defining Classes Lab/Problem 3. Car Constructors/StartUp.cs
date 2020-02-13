@@ -1,8 +1,8 @@
-﻿using System;
-using Problem_2._Car_Extension;
-
 namespace CarManufacturer
 {
+    using System;
+    using CarExtension;
+    
     public class StartUp
     {
         public static void Main(string[] args)
