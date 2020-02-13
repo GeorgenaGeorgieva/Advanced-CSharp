@@ -47,7 +47,6 @@ namespace CarManufacturer
                 { fuelConsumption}
                 { engineIndex}
                 { tiresIndex}
-                
                 inputLine = Console.ReadLine();
             }
         }
