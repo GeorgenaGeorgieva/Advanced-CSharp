@@ -41,12 +41,7 @@ namespace CarManufacturer
                 var currentTires = carTires[int.Parse(specialCarsCriterion[6])];
 
                 Car car = new Car(currentMake, currentModel, currentYear, currentFuelQuantity, currentFuelConsumption)
-                { model}
-                { year}
-                { fuelQuantity}
-                { fuelConsumption}
-                { engineIndex}
-                { tiresIndex}
+         
                 inputLine = Console.ReadLine();
             }
         }
