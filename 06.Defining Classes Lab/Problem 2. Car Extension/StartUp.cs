@@ -1,11 +1,11 @@
-﻿using System;
-using Problem_2._Car_Extension;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace CarManufacturer
 {
+    using System;
+    using Problem_2._Car_Extension;
+    using System.Text;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class StartUp
     {
         public static void Main(string[] args)
