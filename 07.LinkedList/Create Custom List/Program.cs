@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Create_Custom_List
+namespace CreateCustomList
 {
+    using System;
+    
     class Program
     {
         static void Main(string[] args)
@@ -21,7 +21,6 @@ namespace Create_Custom_List
             Console.WriteLine(customList[0]);
 
             customList.Swap(1, 3);
-
         }
     }
 }
