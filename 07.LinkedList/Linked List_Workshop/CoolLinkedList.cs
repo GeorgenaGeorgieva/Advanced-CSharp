@@ -1,4 +1,4 @@
-namespace Linked_List_Workshop
+namespace LinkedListWorkshop
 {
     using System;
     using System.Collections.Generic;
