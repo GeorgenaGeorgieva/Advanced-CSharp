@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Linked_List_Workshop
+namespace LinkedListWorkshop
 {
+    using System;
+    using System.Collections.Generic;
+    
     public class Program
     {
         public static void Main(string[] args)
