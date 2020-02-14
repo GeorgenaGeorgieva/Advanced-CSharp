@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Linked_List_Array
+namespace LinkedListArray
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    
     public class CoolStack
     {
         private object[] values;
@@ -43,7 +43,6 @@ namespace Linked_List_Array
 
             this.values[this.pushCount] = value;
             this.pushCount++;
-
         }
 
         public object Pop()
@@ -57,7 +56,6 @@ namespace Linked_List_Array
             var last = this.values[lastIndex];
             this.pushCount--;
             return last;
-
         }
 
         public void ForEach(Action<object> action)
