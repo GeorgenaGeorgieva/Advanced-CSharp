@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Linked_List_Workshop
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    
     public class CoolLinkedList
     {
         private class CoolNode
