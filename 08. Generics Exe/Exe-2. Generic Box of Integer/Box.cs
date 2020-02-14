@@ -20,7 +20,7 @@
 
         public override string ToString()
         {
-            StringBuilder buidString = new StringBuilder();
+            var buidString = new StringBuilder();
 
             var stringForPrinting = $"{this.element.GetType()}: {this.element}";
             buidString.Append(stringForPrinting);
