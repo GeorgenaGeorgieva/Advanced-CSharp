@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
-
 namespace IteratorsAndComparators
 {
+    using System.Collections;
+    using System.Collections.Generic;
+    using System;
+    
     public class Library : IEnumerable<Book>
     {
         private List<Book> books;
