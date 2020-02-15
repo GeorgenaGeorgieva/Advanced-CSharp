@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
 namespace IteratorsAndComparators
 {
+    using System.Collections.Generic;
+    
     public class Book
     {
         private string title;
