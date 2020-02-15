@@ -26,6 +26,7 @@
         {
             var lastElement = this.elements.Last();
             this.elements.RemoveAt(this.elements.Count - 1);
+            
             return lastElement;
         }
     }
