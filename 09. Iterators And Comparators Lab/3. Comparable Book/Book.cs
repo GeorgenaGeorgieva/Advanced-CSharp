@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace IteratorsAndComparators
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Book : IComparable<Book>
     {
         private string title;
