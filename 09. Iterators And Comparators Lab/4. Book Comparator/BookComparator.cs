@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
 namespace IteratorsAndComparators
 {
+    using System;
+    using System.Collections.Generic;
+    
     public class BookComparator : IComparer<Book>
     {
         public int Compare(Book x, Book z)
